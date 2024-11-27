@@ -4,13 +4,17 @@
   margin: 0 auto;
   padding: 16px;
 }
-
-  
-
+.filter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 20px 40px 20px;
+}
 h1 {
   text-align: center;
   margin-bottom: 24px;
 }
+
 
 .grid {
   display: grid;
@@ -73,6 +77,15 @@ h1 {
   background-color: #cccccc; 
   cursor: not-allowed;
 }
+.dark-mode{
+  background-color:#333;
+  color:#FFFFFF;
+}
+.ligt-mode{
+  background-color:#FFFFFF;
+  color:#333;
+  
+}
 
 .pagination span {
   font-size: 1.2rem;
@@ -85,6 +98,15 @@ h1 {
   .container {
     padding: 12px;
   }
+  .filter{
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 20px 84px 20px;
+
+  }
+  
 
   h1 {
     font-size: 1.5rem;

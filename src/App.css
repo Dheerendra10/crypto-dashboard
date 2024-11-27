@@ -1,6 +1,12 @@
 .App {
   text-align: center;
+  margin: 0px;
 }
+/* .dark-mode{
+  background-color: aqua;
+  color:black;
+} */
+
 
 .App-logo {
   height: 40vmin;

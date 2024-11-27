@@ -1,8 +1,6 @@
 
  import DashboardView from "../components/DashboardView";
 function HomePage(){
-
-
     return (
         <>
         <div>

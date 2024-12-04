@@ -1,38 +1,55 @@
 /* General Styles for All Screen Sizes */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px;
+  max-width: 1280px;
+  /* padding-top: 1rem; */
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .filter{
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 20px 20px 40px 20px;
 }
-h1 {
-  text-align: center;
+.text {
   margin-bottom: 24px;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55);
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
 }
-
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 16px;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  padding: 0px 20px 20px 20px;
-  border-radius: 10px;
+  transition-duration: .3s;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  padding: 1.5rem;
+  border-radius: .5rem;
+  border: 0 solid #e5e7eb;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 );
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   overflow: hidden;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
-  margin: 20px;
-  border: 1px solid hsla(260, 11%, 85%, 1);      
+  margin: 0px;
+  text-decoration:none;
+       
+}
+a:link {
+  text-decoration: none;
 }
 
 .card:hover {
@@ -41,13 +58,35 @@ h1 {
 }
 
 .card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 8px;
+  font-weight: 600;
+  margin: 0px;
+  font-size: 1.2rem;
+  --tw-text-opacity: 1;
+ color: rgb(17 24 39 );
+}
+.main-content{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+}
+ #text-2{
+font-size: .575rem;
+--tw-text-opacity: 1;
+color:rgb(107 114 128 / var(--tw-text-opacity, 1));
+line-height: 1.25rem;
 }
 
 .card p {
-  font-size: 1rem;
-  margin: 4px 0;
+  font-size: .876rem;
+  line-height: 1.75rem;
+  margin: 0;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39);
+}
+.card p:last-of-type {
+  --tw-text-opacity:1;
+ color: rgb(34 197 94 / var(--tw-text-opacity,1)) ;
 }
 
 .pagination {
@@ -103,11 +142,13 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 20px 84px 20px;
+
 
   }
+  .text {
+    font-size: 1rem;
+  }
   
-
   h1 {
     font-size: 1.5rem;
     margin-bottom: 16px;
@@ -119,6 +160,7 @@ h1 {
   }
 
   .card {
+    margin-bottom: 20px;
     padding: 12px;
   }
 

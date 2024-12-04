@@ -20,6 +20,7 @@ const DashboardView = () => {
   };
 
   const filteredData = useMemo(() => {
+    console.log(data);
     if (!data) return [];
     return data
       .filter((coin: any) => {
@@ -46,7 +47,7 @@ const DashboardView = () => {
 
   return (
     <div className={`container mx-auto p-4 ${darkMode ? "dark-mode" : "ligt-mode"}`}>
-      <h1 className="text-2xl  font-bold mb-4">List of Cryptocurrencies</h1>
+      <h1 className="text">Cryptocurrency Market </h1>
       <div className="filter">
         <div>
         <button
@@ -65,12 +66,18 @@ const DashboardView = () => {
           <div
             key={coin.id}
             className="p-4 border rounded shadow hover:bg-gray-100 cursor-pointer card"
-          >
-            <h2 className="text-lg font-semibold">{coin.name}</h2>
-            <p>Symbol: {coin.symbol.toUpperCase()}</p>
-            <p>Current Price: ${coin.current_price}</p>
-            <p>24h Change: {coin.price_change_percentage_24h}%</p>
-            <p>Market Cap: ${coin.market_cap.toLocaleString()}</p>
+          > 
+          <div className="main-content">
+            <div>
+              <img src={coin.image} alt="Coin Image" width="50" height="50"/>
+            </div>
+            <div>
+            <h2 >{coin.name}</h2>
+            <p id="text-2">{coin.symbol.toUpperCase()}</p>
+            </div>
+          </div>
+            <p > ${coin.current_price}</p>
+            <p> {coin.price_change_percentage_24h}%</p>
           </div>
           </Link>
         ))}

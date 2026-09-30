@@ -6,7 +6,7 @@ function HomePage(){
         <div>
             <DashboardView></DashboardView>
         </div>
-        
+        <div></div>
         </>
     )
 }
